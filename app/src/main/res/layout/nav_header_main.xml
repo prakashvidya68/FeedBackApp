@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        android:gravity="bottom" android:orientation="vertical" android:id="@+id/linearLayout"
+        android:paddingBottom="8dp" android:padding="0dp" android:background="@color/colorPrimary">
+
+
+    <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp" app:srcCompat="@drawable/profiledefault" android:id="@+id/userImageNavHeader"
+            android:contentDescription="TODO"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:id="@+id/userNameNavHeader"
+            tools:text="Vidya Prakash"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp" android:paddingRight="8dp"
+            app:layout_constraintStart_toEndOf="@+id/userImageNavHeader"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toTopOf="@+id/userImageNavHeader"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="13dp"
+            android:id="@+id/userE-mailNavHeader"
+            tools:text="prakashvidya68@gmail.com"
+            android:textSize="10sp"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@+id/userNameNavHeader"
+            app:layout_constraintStart_toEndOf="@+id/userImageNavHeader"
+            android:layout_marginStart="16dp"/>
+    <Button
+            android:text="Login"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:id="@+id/loginBtnNavHeader"
+            android:background="@drawable/round_btn" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/userImageNavHeader" app:layout_constraintVertical_bias="0.027"
+            android:textAlignment="center"
+            android:textColor="@android:color/white" android:textSize="14sp" android:layout_margin="0dp"
+            android:onClick="loginBtnNavClicked"/>
+    <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp" app:srcCompat="@drawable/addchannelbutton"
+            android:id="@+id/addChannelBtn"
+            android:background="@android:color/transparent" android:scaleType="fitXY" android:padding="5dp"
+            android:layout_marginEnd="16dp" app:layout_constraintEnd_toEndOf="parent"
+            android:onClick="addChannelBtnClicked"
+            app:layout_constraintTop_toTopOf="@+id/registerBtnNavHeader"
+            app:layout_constraintBottom_toBottomOf="@+id/registerBtnNavHeader"
+            app:layout_constraintStart_toEndOf="@+id/loginBtnNavHeader"
+            app:layout_constraintHorizontal_bias="1.0" app:layout_constraintVertical_bias="1.0"/>
+    <Button
+            android:text="Register"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:id="@+id/registerBtnNavHeader" android:background="@drawable/round_btn"
+            app:layout_constraintStart_toEndOf="@+id/loginBtnNavHeader" android:layout_marginStart="16dp"
+            app:layout_constraintTop_toTopOf="@+id/loginBtnNavHeader"
+            app:layout_constraintEnd_toStartOf="@+id/addChannelBtn" android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="0.167" android:textAlignment="center"
+            android:textColor="@android:color/white" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:onClick="registerBtnNavHeaderClicked"
+            app:layout_constraintVertical_bias="0.0">
+
+    </Button>
+    <android.support.v7.widget.RecyclerView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/registerBtnNavHeader"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="32dp"
+            android:padding="8dp" android:id="@+id/addChannelRecyclerView"/>
+    <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addChannelprogressBar" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
+
+</android.support.constraint.ConstraintLayout>
